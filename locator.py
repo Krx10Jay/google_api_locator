@@ -50,7 +50,7 @@ else:
             df = pd.read_excel(uploaded_file)
 
         # Standardize column names to lowercase
-        df.columns = df.columns.str.strip().lower()
+        df.columns = df.columns.str.strip().str.lower()
 
         # Check for latitude and longitude columns
         if 'latitude' in df.columns and 'longitude' in df.columns:
